@@ -83,7 +83,7 @@ class Client:
         self.vdisplay = Xvfb()
         self.vdisplay.start()
         self.info("Starting browser")
-        self.br = self.browser = webdriver.Firefox()
+        self.br = self.browser = webdriver.Firefox(log_path="/tmp/geckodriver.log)
         self.br.implicitly_wait(10)
         return self
 
